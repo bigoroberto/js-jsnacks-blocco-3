@@ -6,7 +6,7 @@
 
 var alfabeto =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","U","V","W","X","Y","Z"];
 
-var min = parseInt
+var min = 3;
 var max = 10;
 
 console.log(filterArray(alfabeto,min,max));
