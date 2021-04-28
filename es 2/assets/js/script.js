@@ -1,76 +1,87 @@
-var zucchineGrandi = [];
-var zucchinePiccole = [];
+$(document).ready(function(){
+  var limit = 15;
+  var sommaSmall = 0;
+  var sommaLong = 0;
+  var arrLong = [];
+  var arrSmall = [];
+  var arrZucchine = [
+    {
+      varietà : "verde chiaro",
+      peso : 2,
+      lunghezza : 6,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 4,
+      lunghezza : 10,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 1,
+      lunghezza : 13,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 8,
+      lunghezza : 14,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 4,
+      lunghezza : 19,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 5,
+      lunghezza : 9,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 2,
+      lunghezza : 4,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 7,
+      lunghezza : 16,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 11,
+      lunghezza : 12,
+    },
+    {
+      varietà : "verde chiaro",
+      peso : 5,
+      lunghezza : 17,
+    },
+    
+  ];
 
-
- var arrZucchine = [{
-    varietà : 'nero di Milano',
-    peso : 100,
-    dimensione : 17
-  },
-  {
-    varietà : 'romanesco',
-    peso : 100,
-    dimensione : 10
-  },
-  {
-    varietà : 'ortolano di Faenza',
-    peso : 100,
-    dimensione : 12
-  },
-  {
-    varietà : 'lunga fiorentina',
-    peso : 100,
-    dimensione : 11
-  },
-  {
-    varietà : 'siciliano',
-    peso : 100,
-    dimensione : 20
-  },
-  {
-    varietà : 'striata di Napoli',
-    peso : 100,
-    dimensione: 38
-  },
-  {
-    varietà : 'bianca triestina',
-    peso : 100,
-    dimensione : 25
-  },
-  {
-    varietà : 'rigata pugliese',
-    peso : 100,
-    dimensione : 9
-  },
-  {
-    varietà : 'tonda di Piacenza',
-    peso : 100,
-    dimensione : 14
-  },
-  {
-    varietà : 'trombetta di Albenga',
-    peso : 100 ,
-    dimensione : 17,
-  }];
-
-  console.log(arrZucchine);
-
-
-  // ricorda come prendere i valori con for of 
-  //condizioni (if..)
-  //come chiamare ['peso']
-
-
-  for(var zucchina of arrZucchine){
-    if(zucchina['dimesione'] < 15){
-      zucchinePiccole.push(zucchina);
+  for(var zucchine of arrZucchine){
+    if(courgette['lunghezza'] >= limit ){
+      arrLong.push(courgette)
+      console.log("long");
+      for(var key in zucchine){
+        console.log(key + ": " + zucchine[key]);
+      }
+      console.log("--------------------");
+      sommaLong += zucchine['peso'];
     }else{
-      zucchineGrandie.push(zucchina)
+      arrSmall.push(zucchine);
+      console.log("small");
+      for(var key in zucchine){
+        console.log(key + ": " + zucchine[key]);
+      }
+      console.log("--------------------");
+      sommaSmall += courgette['peso'];
     }
+    
   }
+  console.log("zucchine corte: " + arrSmall.length);
+  console.log("zucchine lunghe: " + arrLong.length);
 
+  console.log("La somma del peso delle zucchine corte è: " + sommaSmall);
+  console.log("La somma del peso delle zucchine lunghe è: " + sommaLong);
 
-  console.log(zucchinePiccole)
-  console.log(zucchineGrandi)
-
- 
+})
